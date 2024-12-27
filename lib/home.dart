@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intro/second.dart';
+import 'package:intro/test.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -28,7 +29,16 @@ appBar: AppBar(
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Shop()));
           },
       )
+        ,GestureDetector(
+        child: 
+        Icon(Icons.currency_bitcoin),
+         onTap: (){
+            print("Hello from gesture detector");
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MyTest()));
+          },
+      )
         
+     
         ,Icon(Icons.verified_user),
     ],
 ),
