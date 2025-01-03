@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intro/contact.dart';
 import 'package:intro/second.dart';
 import 'package:intro/test.dart';
 
@@ -39,12 +40,19 @@ appBar: AppBar(
       )
         
      
-        ,Icon(Icons.verified_user),
+        ,GestureDetector(
+        child: 
+        Icon(Icons.call),
+         onTap: (){
+       
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ContactUs()));
+          },
+      )
     ],
 ),
-body:
- Center(
-child:
+// body:
+//  Center(
+// child:
 //1-1-2025 start
 // ListView.builder(itemBuilder: (context,index){
 //   return Padding(
@@ -70,35 +78,71 @@ child:
 // },itemCount: 10,)
 
 // Grid View builder
-GridView.builder(
-  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 2,
-    crossAxisSpacing: 10,
-    mainAxisSpacing: 10,
-    childAspectRatio: 2/3,
-  ),
-  itemBuilder: (context,index){
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        // height: 200,
-        // width: 200,
-        color: Colors.red,
-        child: Center(
-          child: Text("$index",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 32,
-            fontWeight: FontWeight.bold
-          ),
-          ),
+// GridView.builder(
+//   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//     crossAxisCount: 2,
+//     crossAxisSpacing: 10,
+//     mainAxisSpacing: 10,
+//     childAspectRatio: 2/3,
+//   ),
+//   itemBuilder: (context,index){
+//     return Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: Container(
+//         // height: 200,
+//         // width: 200,
+//         color: Colors.red,
+//         child: Center(
+//           child: Text("$index",
+//           style: TextStyle(
+//             color: Colors.white,
+//             fontSize: 32,
+//             fontWeight: FontWeight.bold
+//           ),
+//           ),
           
-        ),
-      ),
-    );
-  },
-  itemCount: 10,
-)
+//         ),
+//       ),
+//     );
+//   },
+//   itemCount: 10,
+// )
+
+// // task:
+//  ListView.builder(itemBuilder: (context,index){
+//   return Padding(
+//     padding: const EdgeInsets.all(8.0),
+//     child: 
+// Container(
+//       // height: 200,
+//       // width: 200,
+//       color: Colors.red,
+//       child: Center(
+//         child: GridView.builder(gridDelegate: 
+//        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 
+//        2,crossAxisSpacing: 10,mainAxisSpacing: 10,childAspectRatio: 2/3)
+//         , itemBuilder: (context,index){
+//           return Container(
+//             color: Colors.green,
+//             child: Center(
+//               child: Text("$index",
+//               style: TextStyle(
+//                 color: Colors.white,
+//                 fontSize: 32,
+//                 fontWeight: FontWeight.bold
+//               ),
+//               ),
+//             ),
+//           );
+//         })
+        
+//       ),
+//     ),
+//   );
+
+// },itemCount: 10,)
+
+
 //1-1-2025 end
 
 
@@ -271,7 +315,7 @@ GridView.builder(
 // 30-12-2024 end
 
 
- )
+//  )
 //  Padding(
 //   padding: const EdgeInsets.only(
 //     top: 20,
